@@ -1,3 +1,4 @@
+'use client'
 import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
@@ -8,15 +9,21 @@ import {Button} from "@nextui-org/button";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon, IgIcon, TwitterIcon } from "@/components/icons";
-import ProjectHistory from "@/components/projectHistory";
 import { SeeMore } from "@/components/icon/seeMore";
 import { CodeSnipped } from "@/components/codeSnipped";
+import { portoConfig } from "@/config/portofolio";
+import { ProjectHistory } from "@/components/projectHistory";
+import { useRouter } from 'next/navigation'
+import { CardExperience } from "@/components/CardExperience";
+import { workConfig } from "@/config/workExperience";
 
 export default function Home() {
+  const router = useRouter()
+
   return (
     <>
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-       <div className="flex flex-row text-center  w-full gap-x-16">
+       <div className="lg:flex flex-row text-center  w-full gap-x-16">
         <div className="flex gap-4 items-center">
           <Avatar isBordered color="primary" src="/image/foto.jpg" className="w-40 h-40 text-large" />
         </div>
@@ -32,7 +39,6 @@ export default function Home() {
             </p>
           </div>
         </div>
-      <div className="flex gap-3">
         <div className="flex flex-col">
           <div className={subtitle({ class: "mt-4 font-bold" })}>
             Lets Connect!
@@ -52,27 +58,26 @@ export default function Home() {
             <Link
               isExternal
               className={buttonStyles({ variant: "bordered", radius: "full" })}
-              href={siteConfig.links.github}
+              href={'https://instagram.com/ronaldotriandes'}
             >
               <IgIcon size={25} />
             </Link>
             <Link
               isExternal
               className={buttonStyles({ variant: "bordered", radius: "full" })}
-              href={siteConfig.links.github}
+              href={'https://github.com/ronaldotriandes'}
             >
               <TwitterIcon size={25} />
             </Link>
             <Link
               isExternal
               className={buttonStyles({ variant: "bordered", radius: "full" })}
-              href={siteConfig.links.github}
+              href={'https://github.com/ronaldotriandes'}
             >
               <GithubIcon size={25} />
             </Link>
           </div>
         </div>
-      </div>
       </div>
       {/* <div className="inline-block max-w-xl text-center justify-center">
         <span className={title()}>Make&nbsp;</span>
@@ -119,13 +124,16 @@ export default function Home() {
     <section className="flex flex-col gap-4 py-8 md:py-10">
       <div>
         <div className={subtitle({ class: "mt-4 font-bold text-left text-xl" })}>
-          Project History
+         Work Experience
         </div>
       </div>    
-      <ProjectHistory/>
-      <ProjectHistory/>
-      <ProjectHistory/>
-      <ProjectHistory/>
+      {workConfig.map((item: any) => {
+        return (
+          <>
+           <CardExperience data={item}/>
+          </>
+        )
+      })}
           <div className="w-28 flex flex-row w-full gap-x-5 ">
               {/* <Link
                 isExternal
@@ -134,7 +142,32 @@ export default function Home() {
               >
                 <GithubIcon size={25} />
               </Link> */}
-              <Button startContent={<SeeMore/>} className="bg-[#323443] text-[#C4C4C4]" radius="md" size="sm"> See More</Button>
+              <Button onPress={() => router.push('/experience')} startContent={<SeeMore/>} className="bg-[#323443] text-[#C4C4C4]" radius="md" size="sm"> See More</Button>
+
+          </div>
+    </section>
+    <section className="flex flex-col gap-4 py-8 md:py-10">
+      <div>
+        <div className={subtitle({ class: "mt-4 font-bold text-left text-xl" })}>
+          Project History
+        </div>
+      </div>    
+      {portoConfig.map((item: any) => {
+        return (
+          <>
+           <ProjectHistory data={item}/>
+          </>
+        )
+      })}
+          <div className="w-28 flex flex-row w-full gap-x-5 ">
+              {/* <Link
+                isExternal
+                className={buttonStyles({ variant: "bordered", radius: "full" })}
+                href={siteConfig.links.github}
+              >
+                <GithubIcon size={25} />
+              </Link> */}
+              <Button onPress={() => router.push('/experience')} startContent={<SeeMore/>} className="bg-[#323443] text-[#C4C4C4]" radius="md" size="sm"> See More</Button>
 
           </div>
     </section>

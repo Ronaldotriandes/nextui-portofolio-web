@@ -27,7 +27,7 @@ const list = [
 export const CodeSnipped = () => {
     return (
         <>
-    <div className="grid grid-cols-2 sm:grid-cols-2 gap-10">
+    <div className="grid lg:grid-cols-2 sm:grid-cols-2 gap-10">
       {list.map((item, index) => (
         <Card shadow="sm" key={index} isPressable >
           <CardBody className="overflow-visible w-full object-cover h-full bg-[#323443]">
@@ -48,8 +48,8 @@ export const CodeSnipped = () => {
                 </div>
                 <div className="flex flex-row mt-4">
                     <div className="flex flex-row w-full gap-x-3">
-                        <CardIcons/>
-                        <CardIcons/>
+                        {/* <CardIcons/>
+                        <CardIcons/> */}
                     </div>
                     <div className="flex flex-row w-full justify-end self-center gap-x-3">
                         <StartIcon size={20}/>

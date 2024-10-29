@@ -12,7 +12,7 @@ import { GithubIcon, IgIcon } from "@/components/icons";
 import { CardImage } from "../CardImage";
 import { FC } from "react";
 
-export const ProjectHistory: FC<{
+export const WorkExperience: FC<{
   data: {
     jobTitle: string;
     description: string;
