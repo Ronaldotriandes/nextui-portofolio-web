@@ -23,8 +23,8 @@ export const CardIcons :FC<{
     }
     return (
     <>
-       <Card className="w-10 rounded-lg bg-white items-center">
-          <CardBody className="overflow-visible w-[30px] object-cover h-[35px] bg-white p-0 justify-center items-center">
+       <Card className="min-w-10 rounded-lg bg-white items-center">
+          <CardBody className="overflow-visible w-[30px] object-cover  h-[35px] bg-white p-0 justify-center items-center">
           <Image
                 alt="Relaxing app background"
                 className="z-0 w-[80px] h-[90px] object-contain"

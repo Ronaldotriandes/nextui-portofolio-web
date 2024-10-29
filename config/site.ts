@@ -9,6 +9,10 @@ export const siteConfig = {
       href: "/",
     },
     {
+      label: "Work Experience",
+      href: "/work-experience",
+    },
+    {
       label: "Portofolio",
       href: "/portofolio",
     },

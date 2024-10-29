@@ -135,14 +135,7 @@ export default function Home() {
         )
       })}
           <div className="w-28 flex flex-row w-full gap-x-5 ">
-              {/* <Link
-                isExternal
-                className={buttonStyles({ variant: "bordered", radius: "full" })}
-                href={siteConfig.links.github}
-              >
-                <GithubIcon size={25} />
-              </Link> */}
-              <Button onPress={() => router.push('/experience')} startContent={<SeeMore/>} className="bg-[#323443] text-[#C4C4C4]" radius="md" size="sm"> See More</Button>
+              <Button onPress={() => router.push('/work-experience')} startContent={<SeeMore/>} className="bg-[#323443] text-[#C4C4C4]" radius="md" size="sm"> See More</Button>
 
           </div>
     </section>

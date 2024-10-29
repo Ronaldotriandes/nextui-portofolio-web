@@ -1,4 +1,4 @@
-export default function COdeLayout({
+export default function WorkLayout({
   children,
 }: {
   children: React.ReactNode;

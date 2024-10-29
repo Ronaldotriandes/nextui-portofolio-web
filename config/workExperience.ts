@@ -4,7 +4,7 @@ export const workConfig = [
         jobTitle: 'Backend Developer ',
         company : 'PT. Telkom Indinesia, Tbk',
         image: '/image/telkom.png',
-        status: 'fulltime',
+        status: 'Fulltime',
         duration : '2020 - Current',
         description: `Participate in entire lifecycle, coding and debugging. Collaborate with Front
 end dev to integrate client side with several side logic. Build reusable code 
@@ -16,7 +16,7 @@ administrators to identify new features in Telkom Partner Network.`,
         jobTitle: 'Backend Developer',
         company : 'INA Digital',
         image: '/image/inadigital.png',
-        status: 'fulltime',
+        status: 'Fulltime',
         duration : 'May 2024 - Octo 2024',
         description: `INA digital is a government project that connects several application 
 features in all institutions and ministries in Indonesia to a super application. 
@@ -26,10 +26,10 @@ application`,
         icons: ['nestjs','honojs','redis','nextjs', 'elasticsearch', 'datadog']
     },
     {
-        jobTitle: 'Facillitator Fulstack Mentor',
+        jobTitle: 'Facillitator Fullstack Mentor',
         company : 'Binar Academy',
         image: '/image/binar.png',
-        status: 'fulltime',
+        status: 'Fulltime',
         duration : '2020-2021',
         description: `Provide and teach several students about how to build an application as a 
 fullstack web developer with expressjs, postgresql, knexjs, reactJs and 
