@@ -2,8 +2,14 @@
 export const portoConfig = [
     {
         jobTitle: 'Web Development',
-        title : 'Apps PT. Mencari Cinta Sejati',
+        title : 'INA Digital',
         image: '/project/Ina Digital.png',
+        description: 'Serrow restructured and designed core pages, creating interactive elements that put users in control and allowed them to discover the information needed to make a decision.'
+    },
+    {
+        jobTitle: 'Web Development',
+        title : 'MR Cool',
+        image: '/project/mrcool.png',
         description: 'Serrow restructured and designed core pages, creating interactive elements that put users in control and allowed them to discover the information needed to make a decision.'
     },
     {
