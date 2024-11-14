@@ -1,60 +1,46 @@
-import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
-import {Image} from "@nextui-org/image";
+'use client'
+import {Card, CardBody, CardFooter} from "@nextui-org/card";
 import { CardIcons } from "../CardIcons";
-import { StartIcon } from "../icons";
-const list = [
-    {
-      title: "Orange",
-      img: "/images/fruit-1.jpeg",
-      price: "$5.50",
-    },
-    {
-      title: "Tangerine",
-      img: "/images/fruit-2.jpeg",
-      price: "$3.00",
-    },
-    {
-      title: "Raspberry",
-      img: "/images/fruit-3.jpeg",
-      price: "$10.00",
-    },
-    {
-      title: "Lemon",
-      img: "/images/fruit-4.jpeg",
-      price: "$5.30",
-    },
-   ]
+import { GithubIcon, StartIcon } from "../icons";
+import { codeConfig } from "@/config/codeSnipped";
+import { Link } from "@nextui-org/link";
+
 export const CodeSnipped = () => {
     return (
         <>
     <div className="grid lg:grid-cols-2 sm:grid-cols-2 gap-10">
-      {list.map((item, index) => (
-        <Card shadow="sm" key={index} isPressable >
+      {codeConfig.map((item, index) => (
+        <Card shadow="sm" key={index} isPressable onPress={() => window.open('https://github.com/ronaldotriandes', '_blank')}>
           <CardBody className="overflow-visible w-full object-cover h-full bg-[#323443]">
-            {/* <Image
-              shadow="sm"
-              radius="lg"
-              width="100%"
-              alt={item.title}
-              className="w-full object-cover h-[240px]"
-              src={item.img}
-            /> */}
-            <div className="flex flex-col p-6 gap-y-3">
+            <div className="flex flex-col p-6 pb-0 gap-y-3">
                 <div className='mt-4 font-semibold text-left text-2xl'>
-                    Web PT. Mencari Cinta Sejati
+                   {item.title}
                 </div>
                 <div className='mt-4 font-light text-left text-md'>
-                Serrow restructured and designed core pages, creating interactive elements that put users in control and allowed them to discover the information needed to make a decision.
+                  {item.description}
                 </div>
                 <div className="flex flex-row mt-4">
-                    <div className="flex flex-row w-full gap-x-3">
-                        {/* <CardIcons/>
-                        <CardIcons/> */}
+                    <div className="flex flex-row w-full gap-x-3 flex-wrap gap-y-4">
+                        {
+                                item.icons.map((item:string, i:number) => (
+                                    <CardIcons key={i}  icon={item} size={25}/>
+                                ))
+                        }  
                     </div>
-                    <div className="flex flex-row w-full justify-end self-center gap-x-3">
+                    <div className="flex flex-row w-[100px] justify-end self-center gap-x-3">
                         <StartIcon size={20}/>
-                        <div>12 Like</div>
+                        <div>{item.likes} Like</div>
                     </div>
+                </div>
+                <div className='mt-4 font-light text-right text-md  justify-end flex gap-x-2'>
+                 Visit on Github  
+                 <Link
+                  isExternal
+                  className="text-white"
+                  href={'https://github.com/ronaldotriandes'}
+                >
+                  <GithubIcon size={25} />
+                </Link>
                 </div>
             </div>
           </CardBody>
