@@ -8,10 +8,11 @@ export default function CodeGithubPage() {
     <section className="flex flex-col gap-4/">
       <div>
         <div className={subtitle({ class: "mt-4 font-bold text-left text-xl" })}>
-          Project History
+         Code Snipped
         </div>
-      </div>    
+      </div>   
       <CodeSnipped/>   
+ 
     </section>
   );
 }
