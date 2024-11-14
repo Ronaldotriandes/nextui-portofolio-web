@@ -47,15 +47,24 @@ export default function RootLayout({
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow bg-[#272727]">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
+            <footer className="w-full flex items-center justify-center py-3 gap-x-2">
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
-                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
+                href="https://triandes.site"
                 title="nextui.org homepage"
               >
                 <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
+                <p className="text-primary">Triandes</p>,
+              </Link> 
+              <Link
+                isExternal
+                className="flex items-center gap-1 text-current"
+                href="https://www.figma.com/design/yTxw13ILGIRZAcqawvmauS/Portofolio-Website-Template-(Community)?node-id=813-137&node-type=frame&t=METOgv26byWnkvgq-0"
+                title="nextui.org homepage"
+              >
+                <span className="text-default-600">Design Inspiration from</span>
+                <p className="text-primary">Figma Community</p>
               </Link>
             </footer>
           </div>
