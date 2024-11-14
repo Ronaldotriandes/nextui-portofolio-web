@@ -34,7 +34,8 @@ export default function Home() {
           <div className="text-left font-[300]">
             <p>
             Software developer with more than 4 years of experience and using several 
-            familiar tech stacks such as <span className="text-[#62D9FF]"> javascript </span> , Php, <span className="text-[#80FFA3]">Node Js</span>, <span className="text-[#62D9FF]"> React Native </span>, C++, <span className="text-[#80FFA3]"> Go</span> and 
+            familiar tech stacks such as <span className="text-[#62D9FF]"> javascript </span> , Php, <span className="text-[#4CA9FF]"> React Js</span>, <span className="text-[#80FFA3]">Node Js</span>, <span className="text-[#62D9FF]"> React Native </span>, C++, <span className="text-[#80FFA3]"> Go</span>,
+            <span className="text-[#62D9FF]"> Next Js </span> , and 
             <span className="text-[#4CA9FF]"> Database</span>. 
             </p>
           </div>
@@ -171,7 +172,7 @@ export default function Home() {
         </div>
       </div> 
       <CodeSnipped/>   
-          <div className="w-28 flex flex-row w-full gap-x-5 ">
+          <div className="flex flex-row w-full gap-x-5 ">
               {/* <Link
                 isExternal
                 className={buttonStyles({ variant: "bordered", radius: "full" })}
@@ -179,7 +180,7 @@ export default function Home() {
               >
                 <GithubIcon size={25} />
               </Link> */}
-              <Button startContent={<SeeMore/>} className="bg-[#323443] text-[#C4C4C4]" radius="md" size="sm"> See More</Button>
+              <Button onPress={() => router.push('/code')}  startContent={<SeeMore/>} className="bg-[#323443] text-[#C4C4C4]" radius="md" size="sm"> See More</Button>
 
           </div>
     </section>
